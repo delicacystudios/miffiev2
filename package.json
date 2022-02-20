@@ -1,0 +1,35 @@
+{
+  "name": "miffie",
+  "version": "0.0.1",
+  "description": "Miffie is a new and modern musical tool for your server. Miffie contains many features that will help you enjoy your favorite music",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delicacystudios/miffiev2.git"
+  },
+  "keywords": [
+    "Music",
+    "DJS",
+    "Bot"
+  ],
+  "author": "NateAles",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/delicacystudios/miffiev2/issues"
+  },
+  "homepage": "https://github.com/delicacystudios/miffiev2#readme",
+  "dependencies": {
+    "cpu-stat": "^2.0.1",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "ytdl-core": "^4.10.1"
+  },
+  "devDependencies": {
+    "node": "^16.13.2"
+  }
+}
