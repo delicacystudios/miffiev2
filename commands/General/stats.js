@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-require("moment-duration-format");
+const mmnt = require("moment-duration-format");
 const cpuStat = require("cpu-stat");
 const moment = require("moment");
 const config = require('../../config.js')
@@ -7,7 +7,7 @@ const config = require('../../config.js')
 module.exports = {
   name: "stats",
   description: "Get information about the bot",
-  usage: "",
+  usage: "help",
   permissions: {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
     member: [],
@@ -24,11 +24,11 @@ module.exports = {
         .duration(message.client.uptime)
         .format(" D[d], H[h], m[m]");
 
-      const embed = new MessageEmbed();
-      embed.setColor(config.embedcolor);
-      embed.setTitle(`Miffie's Stats <:beta:945072686244167701>`);
-      embed.setThumbnail(config.avatar)
-      embed.addFields(
+      const embed = new MessageEmbed()
+        .setColor(config.embedcolor)
+        .setTitle(`Miffie's Stats <:beta:945072686244167701>`)
+        .setThumbnail(config.avatar)
+        .addFields(
         {
           name: "<:booster:945070411647975465> Ping",
           value: `┕\`${Math.round(client.ws.ping)}ms\``,
@@ -46,9 +46,9 @@ module.exports = {
           )}mb\``,
           inline: true,
         }
-      );
+      )
 
-      embed.addFields(
+        .addFields(
         {
           name: "<:servers:945070013461700658> Servers",
           value: `┕\`${client.guilds.cache.size}\``,
@@ -64,9 +64,9 @@ module.exports = {
           value: `┕\`${message.client.ws.ping}ms\``,
           inline: true,
         }
-      );
+      )
       
-      embed.addFields(
+        .addFields(
         {
           name: "<:plus:945070174715936879> Version",
           value: `┕\`v${require("../../package.json").version}\``,
@@ -82,7 +82,7 @@ module.exports = {
           value: `┕\`${process.version}\``,
           inline: true,
         }
-      );
+      )
 
       return message.channel.send(embed);
     })

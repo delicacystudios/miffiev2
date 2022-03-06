@@ -1,6 +1,6 @@
 {
   "name": "miffie",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Miffie is a new and modern musical tool for your server. Miffie contains many features that will help you enjoy your favorite music",
   "main": "index.js",
   "scripts": {
@@ -22,12 +22,26 @@
   },
   "homepage": "https://github.com/delicacystudios/miffiev2#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/voice": "^0.8.0",
+    "@distube/yt-dlp": "^1.0.2",
     "cpu-stat": "^2.0.1",
+    "discord-music-player": "^8.3.1",
+    "discord-player": "^5.2.2",
     "discord.js": "^12.5.3",
+    "distube": "^3.3.2",
     "express": "^4.17.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "lib": "^4.3.3",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
-    "ytdl-core": "^4.10.1"
+    "mongoose": "^6.2.2",
+    "opusscript": "0.0.8",
+    "string-progressbar": "^1.0.4",
+    "yt-search": "^2.10.3",
+    "ytdl-core": "^4.11.0",
+    "ytsr": "^3.6.0"
   },
   "devDependencies": {
     "node": "^16.13.2"

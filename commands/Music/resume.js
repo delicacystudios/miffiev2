@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     const embed1 = new Discord.MessageEmbed()
       .setColor(config.embedcolor)
-      .setAuthor("▶ Resumed the music for you!")
+      .setAuthor("<:info22:945071907454210188> ・ ▶ Resumed")
 		const serverQueue = message.client.queue.get(message.guild.id);
 		
     if (serverQueue && !serverQueue.playing) {
@@ -21,7 +21,7 @@ module.exports = {
 
     const embed2 = new Discord.MessageEmbed()
       .setColor(config.embedcolor)
-      .setAuthor("There is nothing playing!")
+      .setDescription("<:info22:945071907454210188> ・ There is nothing playing")
 		return message.channel.send(embed2);
   }
 }

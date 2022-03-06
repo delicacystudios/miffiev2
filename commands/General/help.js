@@ -1,10 +1,12 @@
 const config = require('../../config.js');
 const Discord = require('discord.js');
+const { MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
+
 
 module.exports = {
   name: "help",
   aliases: ["помощь"],
-  usage: "",
+  usage: "help",
   description: "The main command of the bot",
   
   run: async (client, message, args) => {
@@ -12,7 +14,7 @@ module.exports = {
       let embed = new Discord.MessageEmbed()
         .setTitle(`Miffie's commands list <:beta:945072686244167701>`)
         .setThumbnail(config.avatar)
-        .setDescription(`Miffie is a new and modern musical tool for your server. Miffie contains many features that will help you enjoy your favorite music \n_ _`)
+        .setDescription(`Miffie is a new and modern musical tool for your server. Miffie contains many features that will help you enjoy your favorite music \n`)
         .setColor(config.embedcolor)
         .addFields(
           {
@@ -21,13 +23,13 @@ module.exports = {
             inline: true
           },
           {
-            name: '`m/play [Link]`', 
+            name: '`m/play`', 
             value: 'Starts a song that you ordered',
             inline: true
           },
           {
             name: '`m/queue`', 
-            value: 'Shows a queue of a server',
+            value: 'Shows a queue of your server',
             inline: true
           },
           {
@@ -58,11 +60,6 @@ module.exports = {
           {
             name: '`m/info`', 
             value: 'See more information about Miffie',
-            inline: true
-          },
-          {
-            name: '```                             m/help (command)                             ```', 
-            value: 'To see more information about the concrete command',
             inline: true
           }
         )
